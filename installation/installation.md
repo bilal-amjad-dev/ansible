@@ -19,14 +19,13 @@ chmod 400 ansible-master-key-demo.pem
 scp -i "ansible-master-key-demo.pem" ansible-master-key-demo.pem ubuntu@ec2-54-152-.compute-1.amazonaws.com:/home/ubuntu/keys
 ```
 
-3. Master server
+3. Master server (you can see the key has come here)
 
 ```bash
 cd keys 
 ls
 ```
 
-you can see the key has come here
 
 ---
 
