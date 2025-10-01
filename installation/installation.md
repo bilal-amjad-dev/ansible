@@ -1,69 +1,37 @@
 
 
+### Send key-pair (ansible-master-key-demo.pem) from your local computer to ansible server
 
-### Installation of Ansible
 
-```bash
-sudo apt-addrepository
-ppa:ansible/ansible
-```
-// we are installing ansible repository in our system
+1. Create keys folder in master server
 
 ```bash
-sudo apt update
+mkdir keys
 ```
+
+2. Run Scp (source copy) command in your local machine
 
 ```bash
-sudo apt install ansible
-```
-
-
-```bash
-ansible --version
-```
-
-
-### Update Host file:
-
-```bash
-sudo vim /etc/ansible/hosts
-```
-
-
-
-
-```bash
-[servers]
-server1 ansible_host=<Public IP>
-server2 ansible_host=<Public IP>
-server3 ansible_host=<Public IP>
-```
-
-
-### Send `ansible-master-key-demo.pem` from your local computer to ansible server
-
-No1. Create key folder in ansible machine `mkdir keys`
-
-No2. Run Scp (source copy)command in your local machine
-
-scp -i "ansible-master-key-demo.pem" ansible-master-key-demo.pem ubuntu@ec2-54-152-.compute-1.amazonaws.com:/home/ubuntu/keys
-
-
-
-
 chmod 400 ansible-master-key-demo.pem
+```
 
+```bash
+scp -i "ansible-master-key-demo.pem" ansible-master-key-demo.pem ubuntu@ec2-54-152-.compute-1.amazonaws.com:/home/ubuntu/keys
+```
 
+3. Master server
 
-No3. in your ansible server:
-
-cd keys
+```bash
+cd keys 
 ls
+```
 
-you can see the key has come here 
+you can see the key has come here
+
+---
 
 
-Update hostfile
+### Update hostfile
 
 ```bash
 sudo vim /etc/ansible/hosts
@@ -84,18 +52,4 @@ ansible_ssh_private_key_file=/home/ubuntu/keys/ansible-master-key-demo.pem
 ```
 
 Esc:wq!
-
-### Ping all servers
-
-```bash
-ansible servers -m ping 
-```
-
-yes
-
-server1 | SUCCESS => {
-    "changed": false,
-    "ping": "pong"
-}
-
 
