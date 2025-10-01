@@ -27,8 +27,6 @@ ls
 ```
 
 
----
-
 
 ### Update hosts file
 
