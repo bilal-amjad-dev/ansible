@@ -21,6 +21,8 @@ vim install_nginx_play.yml
      enabled: yes
 ```
 
+Esc:wq!
+
 ```bash
 ansible-playbook install_nginx_play.yml
 ```
@@ -32,4 +34,3 @@ ansible-playbook install_nginx_play.yml
 **Welcome to nginx!**
 
 
----
