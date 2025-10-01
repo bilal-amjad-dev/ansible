@@ -45,6 +45,8 @@ vim index.html
 </html>
 ```
 
+Esc:wq!
+
 ```bash
 ansible-playbook deploy_static_page_play.yml
 ```
