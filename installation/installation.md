@@ -30,7 +30,7 @@ ls
 ---
 
 
-### Update hostfile
+### Update hosts file
 
 ```bash
 sudo vim /etc/ansible/hosts
