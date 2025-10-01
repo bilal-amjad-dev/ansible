@@ -27,6 +27,8 @@ vim deploy_static_page_play.yml
      dest: /var/www/html
 ```
 
+Esc:wq!
+
 
 ```bash
 vim index.html
