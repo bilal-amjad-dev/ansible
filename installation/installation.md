@@ -44,11 +44,41 @@ server3 ansible_host=<Public IP>
 ```
 
 ```bash
-[servers:vars]
+[all:vars]
 ansible_python_interpreter=/usr/bin/python3
 ansible_user=ubuntu
 ansible_ssh_private_key_file=/home/ubuntu/keys/ansible-master-key-demo.pem
 ```
 
 Esc:wq!
+
+
+
+
+
+
+### Ping all servers
+
+```bash
+ansible servers -m ping 
+```
+
+
+```bash
+ansible servers -a "free -h"
+```
+
+```bash
+ansible-inventory --list
+```
+
+
+
+
+
+
+
+
+
+
 
