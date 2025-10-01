@@ -27,7 +27,7 @@ ansible-playbook install_nginx_play.yml
 
 *Now, copy public ip of server2 and paste in browswer*
 
-**and you can see**
+*and you can see*
 
 **Welcome to nginx!**
 
